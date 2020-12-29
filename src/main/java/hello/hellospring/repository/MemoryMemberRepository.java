@@ -12,6 +12,7 @@ public class MemoryMemberRepository implements MemberRepository{
     @Override
     public Member save(Member member) {
         member.setId(++seq);
+
         store.put(member.getId(), member);
 
         return member;
